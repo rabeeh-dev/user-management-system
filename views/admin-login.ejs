@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Login</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; background-color: #333; }
+        .container { background: rgb(130, 128, 128); padding: 2rem; border-radius: 8px; width: 300px; }
+        input { width: 275px; padding: 10px; margin: 10px 0; border-radius: 10px; border: 0; text-align: center;}
+        button { width: 100%; padding: 10px; background: #e60219; color: rgb(245, 243, 243); border: none; cursor: pointer; border-radius: 10px;}
+        .error { color: red; margin-bottom: 10px; }
+        h2 { text-align: center; color: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: red; background-color: rgb(63, 63, 63); border-radius: 10px;">Admin Portal</h2>
+        
+        <% if (error) { %>
+            <div class="error"><%= error %></div>
+        <% } %>
+
+        <form action="/admin/login" method="POST">
+            <label>Admin Username</label>
+            <input type="text" name="username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Enter Dashboard</button>
+        </form>
+    </div>
+</body>
+</html>
