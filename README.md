@@ -2,7 +2,7 @@
 
 A full-stack user management system built using **Node.js**, **Express.js**, and **MongoDB** with separate **User** and **Admin** panels for managing users and application data efficiently.
 
----
+----
 
 ## 🚀 Features
 
